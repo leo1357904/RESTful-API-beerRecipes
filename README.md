@@ -1,1 +1,94 @@
 # RESTful-API-beerRecipes
+
+	~~~RESTful API for [Beer Recipes] is an API programmed with Node.js + Express + Nodemon + MongoDB + Mongoose.
+       It can be used easily by requesting with HTTP protocol to perform four operations termed as CRUD.
+       Let's follow this guide to see how to use this string appication.~~~
+
+Setup Instruction:
+1.Install Node.js. Install MongoDB.
+2.Create a directory which you want to put in the api.
+3.Under that directory, command as "npm init". This will make you a file "package.json".Replace it with mine.
+4.Command as "npm install --save-dev nodemon", "npm install express --save", and "npm install mongoose --save".
+5.Copy my "api" directory under your directory.
+
+
+
+
+
+API Usage Instruction:
+	
+	~~~First of all, let's take a look at the Beer Recipes Database.~~~
+	
+	Attributes in BeerRecipes Database:
+	{
+		BeerID: Number,
+		Name: String,
+        URL: String,
+        Style: String,
+        StyleID: Number,
+        Size(L): Number,
+        OG: Number,
+        FG: Number,
+        ABV: Number,
+        IBU: Number,
+        Color: Number,
+        BoilSize: Number,
+        BoilTime: Number,
+        BoilGravity: Number,
+        Efficiency: Number,
+        MashThickness: Number,
+        SugarScale: String,
+        BrewMethod: String,
+        PitchRate: Number,
+        PrimaryTemp: Number,
+        PrimingMethod: String,
+        PrimingAmount: String
+	}
+	
+	~~~After realizing the database, it's time to see how to use this API to satisfy our needs.
+	   We have all our operations below.~~~
+	   
+	Read BeerID:n Beer Recipe        GET    http://localhost:3000/beerRecipes/n  (n:integer)
+	Create a new Beer Recipe         POST   http://localhost:3000/beerRecipes    (use POST body to determine the value of each attribute.)
+	Update BeerID:n Beer Recipe      PUT    http://localhost:3000/beerRecipes/n  (use PUT body to determine the value of each attribute.)
+	Delete BeerID:n Beer Recipe      DELETE http://localhost:3000/beerRecipes/n
+	
+	List all the Beer Recipes        GET    http://localhost:3000/beerRecipes
+	
+	List Beer Recipes with FILTER!   
+	Filters:																                                      (use '&' to conect every filter you're using. 
+	{								                 GET    http://localhost:3000/beerRecipes?        e.g. ./beerRecipes?BeerID[$gte]=5&Style=6&limit=10)
+		
+    BeerID  [$gte][$lte]					          BeerID=n || BeerID[$lte]=m&BeerID[$gte]=n 
+                        (search by BeerID, n:integer)  (search by a range of BeerID, m>=BeerID>=n, m,n:integer)
+		Name									                  Name=Vanilla Cream Ale || Name=Vanil   
+                           (search by specific Name, actual "Name")  (search by Name LIKE Vanil)
+		Style                                   Style=Cream Ale    (search by specific Style, with actual "Style_Name")
+		
+		StyleID                                 StyleID=n    (search by specific StyleID, n:integer)
+	
+		Color   [$gte][$lte] 	                  Color=n  || Color[$lte]=m&Color[$gte]=n   
+	                       (search by Color, n:float)  (search by a range of Color, m>=BeerID>=n, m,n:float)                     
+		orderBy									orderBy="-BeerID" (sort by BeerID(Attribute), +:asc -:desc)
+		
+		skip									skip=n (skip n Recipes, n:integer)
+		
+		limit									limit=n (limit only n recipes to be responsed, n:integer)
+		
+		field                 field=BeerID+Style+StyleID.... (Attributes to be responsed. use '+' to connect Attributes)
+	}
+	
+	
+* How did you decide which technologies to use as part of your solution?
+	I use Node.js and MongoDB to implement this RESTful API and use Express, Nodemon, and Mongoose to support developing and combining server and database. 
+	I googled "RESTful API" and found out Node.js is a good way to develop RESTful API fast. Then according to the article I found, it is recommended
+    to use MongoDB connect the server and use Express, Nodemon, and Mongoose to support them.	So I decide to use these techniques to complete my challenge.
+
+* Are there any improvements you could make to your submission?
+	
+* What would you do differently if you were allocated more time?
+
+
+
+
+
