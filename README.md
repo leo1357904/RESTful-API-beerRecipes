@@ -5,6 +5,7 @@
        Let's follow this guide to see how to use this string appication.~~~
 
 Setup Instruction:
+
 1.Install Node.js. Install MongoDB.
 2.Create a directory which you want to put in the api.
 3.Under that directory, command as "npm init". This will make you a file "package.json".Replace it with mine.
