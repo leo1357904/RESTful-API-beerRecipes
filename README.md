@@ -8,13 +8,13 @@ Setup Instruction:
 
 1. Install Node.js. Install MongoDB. Clone my api "https://github.com/leo1357904/RESTful-API-beerRecipes"
 2. Make "data\mydb" directory under "D:\mongoDB" -> "D:\MongoDB\data\mydb"
-   If on Linux "sudo mkdir -p \data\mydb"
+   If on Linux "sudo mkdir -p /data/mydb"
 3. Enter where you install your MongoDB "D:\MongoDB\Server\3.6\bin" and launch by "mongod --dbpath D:\MongoDB\data\mydb"
-   If on Linux "sudo mongod --dbpath \data\mydb"
+   If on Linux "sudo mongod --dbpath /data/mydb"
 4. Import the beer recipes CSV file 
        "mongoimport --db mydb --collection beerRecipes --file {path}\RESTful-API-beerRecipes\recipeData.csv --headerline"
-   If on Linux "mongoimport --db mydb --collection beerRecipes --file RESTful-API-beerRecipes\recipedData.csv --headerline"
-5. Enter my clone directory"\RESTful-API-beerRecipes"
+   If on Linux "sudo mongoimport --db mydb --collection beerRecipes --file RESTful-API-beerRecipes/recipedData.csv --headerline"
+5. Enter my clone directory"/RESTful-API-beerRecipes"
 6. Command as "npm install --save-dev nodemon", "npm install express --save", and "npm install mongoose --save".
 7. command "npm run start" to run the server
 8. Use "Postman" to test HTTP requests "GET http://localhost:3000/beerRecipes"
