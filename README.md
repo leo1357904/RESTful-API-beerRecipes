@@ -2,7 +2,7 @@
 
 	~~~RESTful API for [Beer Recipes] is an API programmed with Node.js + Express + Nodemon + MongoDB + Mongoose.
        It can be used easily by requesting with HTTP protocol to perform four operations termed as CRUD.
-       Let's follow this guide to see how to use this string appication.~~~
+       Let's follow this guide to see how to use this strong appication.~~~
 
 Setup Instruction:
 
