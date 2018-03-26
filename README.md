@@ -57,7 +57,7 @@ API Usage Instruction:
 	List all the Beer Recipes        GET    http://localhost:3000/beerRecipes
 	
 	List Beer Recipes with FILTER!   
-	Filters:																                                                                              (use '&' to conect every filter you're using.) 
+	Filters:																                                                               (use '&' to conect every filter you're using.) 
 	{		                 GET    http://localhost:3000/beerRecipes?  (e.g. ./beerRecipes?BeerID[$gte]=5&Style=6&limit=10)
 		
             BeerID  [$gte][$lte]        BeerID=n || BeerID[$lte]=m&BeerID[$gte]=n 
