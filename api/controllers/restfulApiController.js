@@ -5,8 +5,8 @@ var mongoose = require('mongoose'),
     Task = mongoose.model('beerRecipe');
 
 	
-var id_counter=0;//id最末端	
-var	find_id_counter=Task.findOne({}).sort('-BeerID').exec(function (err, task) {
+var id_counter=0;
+var	find_id_counter=Task.findOne({}).sort('-BeerID').exec(function (err, task) {  //尋找id最末端	
 		id_counter=task.BeerID+1;
 		});	
 	
@@ -48,8 +48,7 @@ exports.list_all_recipes = function(req, res) {
 		 .skip(parseInt(req.query.skip))	  //skip=offset 跳過前n筆資料
 		 .limit(parseInt(req.query.limit))    //limit()     限制輸出資料數
 		 .sort(req.query.orderBy);            //sort()      以orderBy屬性排序 +.-決定順排逆排
-		 
-	query.exec(function (err, task) {
+	query.exec(function (err, task) {         //執行query
 		if (err)
 			res.send(err);
 		res.json(task);
@@ -76,7 +75,7 @@ exports.create_a_recipe = function(req, res) { //建立新配方
 };
 
 exports.update_a_recipe = function(req, res) { //更新beer_id的資料
-    req.body.BeerID=req.params.beer_id;
+    req.body.BeerID=req.params.beer_id; //固定BeerID
 	Task.findOneAndUpdate({BeerID: req.params.beer_id}, req.body, {new: true}, function(err, task) {
     if (err)
       res.send(err);
