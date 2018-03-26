@@ -69,7 +69,7 @@ API Usage Instruction:
 		Name		            Name=Vanilla Cream Ale || Name=Vanil   
                        (search by specific Name, actual "Name")  (search by Name LIKE Vanil)
 		Style                       Style=Cream Ale || Name=Crea     
-	    (search by specific Style, actual "Style_Name")  (search by Name LIKE Crea)
+	     (search by specific Style, actual "Style_Name")  (search by Name LIKE Crea)
 		
 		StyleID                     StyleID=n    (search by specific StyleID, n:integer)
 	
