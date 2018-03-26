@@ -39,7 +39,7 @@ API Usage Instruction:
         	Color: Number,
         	BoilSize: Number,
         	BoilTime: Number,
-       	 	BoilGravity: Number,
+       	 BoilGravity: Number,
         	Efficiency: Number,
         	MashThickness: Number,
         	SugarScale: String,
