@@ -67,9 +67,9 @@ API Usage Instruction:
             BeerID  [$gte][$lte]        BeerID=n || BeerID[$lte]=m&BeerID[$gte]=n 
                         (search by BeerID, n:integer)  (search by a range of BeerID, m>=BeerID>=n, m,n:integer)
 		Name		            Name=Vanilla Cream Ale || Name=Vanil   
-                           (search by specific Name, actual "Name")  (search by Name LIKE Vanil)
+                         (search by specific Name, actual "Name")  (search by Name LIKE Vanil)
 		Style                       Style=Cream Ale || Name=Crea     
-			(search by specific Style, actual "Style_Name")(search by Name LIKE Crea)
+	(search by specific Style, actual "Style_Name")(search by Name LIKE Crea)
 		
 		StyleID                     StyleID=n    (search by specific StyleID, n:integer)
 	
