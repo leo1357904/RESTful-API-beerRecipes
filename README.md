@@ -57,26 +57,27 @@ API Usage Instruction:
 	List all the Beer Recipes        GET    http://localhost:3000/beerRecipes
 	
 	List Beer Recipes with FILTER!   
-	Filters:																                                      (use '&' to conect every filter you're using. 
-	{								                 GET    http://localhost:3000/beerRecipes?        e.g. ./beerRecipes?BeerID[$gte]=5&Style=6&limit=10)
+	Filters:																                                                                              (use '&' to conect every filter you're using.) 
+	{		                 GET    http://localhost:3000/beerRecipes?  (e.g. ./beerRecipes?BeerID[$gte]=5&Style=6&limit=10)
 		
-    BeerID  [$gte][$lte]					          BeerID=n || BeerID[$lte]=m&BeerID[$gte]=n 
+                BeerID  [$gte][$lte]	    BeerID=n || BeerID[$lte]=m&BeerID[$gte]=n 
                         (search by BeerID, n:integer)  (search by a range of BeerID, m>=BeerID>=n, m,n:integer)
-		Name									                  Name=Vanilla Cream Ale || Name=Vanil   
+		Name		            Name=Vanilla Cream Ale || Name=Vanil   
                            (search by specific Name, actual "Name")  (search by Name LIKE Vanil)
-		Style                                   Style=Cream Ale    (search by specific Style, with actual "Style_Name")
+		Style                       Style=Cream Ale || Name=Crea     
+			(search by specific Style, actual "Style_Name")(search by Name LIKE Crea)
 		
-		StyleID                                 StyleID=n    (search by specific StyleID, n:integer)
+		StyleID                     StyleID=n    (search by specific StyleID, n:integer)
 	
-		Color   [$gte][$lte] 	                  Color=n  || Color[$lte]=m&Color[$gte]=n   
+		Color   [$gte][$lte] 	    Color=n  || Color[$lte]=m&Color[$gte]=n   
 	                       (search by Color, n:float)  (search by a range of Color, m>=BeerID>=n, m,n:float)                     
-		orderBy									orderBy="-BeerID" (sort by BeerID(Attribute), +:asc -:desc)
+		orderBy			    orderBy="-BeerID" (sort by BeerID(Attribute), +:asc -:desc)
 		
-		skip									skip=n (skip n Recipes, n:integer)
+		skip			    skip=n (skip n Recipes, n:integer)
 		
-		limit									limit=n (limit only n recipes to be responsed, n:integer)
+		limit			    limit=n (limit only n recipes to be responsed, n:integer)
 		
-		field                 field=BeerID+Style+StyleID.... (Attributes to be responsed. use '+' to connect Attributes)
+		field                       field=BeerID+Style+StyleID.... (Attributes to be responsed. use '+' to connect Attributes)
 	}
 	
 	
