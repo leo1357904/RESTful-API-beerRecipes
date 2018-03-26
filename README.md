@@ -65,16 +65,16 @@ API Usage Instruction:
 	{		                 GET    http://localhost:3000/beerRecipes?  (e.g. ./beerRecipes?BeerID[$gte]=5&Style=6&limit=10)
 		
             BeerID  [$gte][$lte]        BeerID=n || BeerID[$lte]=m&BeerID[$gte]=n 
-                      (search by BeerID, n:integer)  (search by a range of BeerID, m>=BeerID>=n, m,n:integer)
+                     (search by BeerID, n:integer)  (search by a range of BeerID, m>=BeerID>=n, m,n:integer)
 		Name		            Name=Vanilla Cream Ale || Name=Vanil   
-                         (search by specific Name, actual "Name")  (search by Name LIKE Vanil)
+                        (search by specific Name, actual "Name")  (search by Name LIKE Vanil)
 		Style                       Style=Cream Ale || Name=Crea     
-	(search by specific Style, actual "Style_Name") (search by Name LIKE Crea)
+	 (search by specific Style, actual "Style_Name")  (search by Name LIKE Crea)
 		
 		StyleID                     StyleID=n    (search by specific StyleID, n:integer)
 	
 		Color   [$gte][$lte] 	    Color=n  || Color[$lte]=m&Color[$gte]=n   
-	                    (search by Color, n:float)  (search by a range of Color, m>=BeerID>=n, m,n:float)                     
+	                   (search by Color, n:float)  (search by a range of Color, m>=BeerID>=n, m,n:float)                     
 		orderBy			    orderBy="-BeerID" (sort by BeerID(Attribute), +:asc -:desc)
 		
 		skip			    skip=n (skip n Recipes, n:integer)
