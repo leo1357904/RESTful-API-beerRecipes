@@ -81,12 +81,15 @@ API Usage Instruction:
 	
 	
 * How did you decide which technologies to use as part of your solution?
+
 	I use Node.js and MongoDB to implement this RESTful API and use Express, Nodemon, and Mongoose to support developing and 		combining server and database. I googled "RESTful API" and found out Node.js is a good way to develop RESTful API fast. Then 		according to the article I found, it is recommended to use MongoDB connect the server and use Express, Nodemon, and Mongoose to 	support them. So I decide to use these techniques to complete my challenge.
 
 * Are there any improvement you could make to your submission?
+
 	I only created the fuction of the API. Therfore, I would like to add more Express middleware to return more details to the user. 	 Also, I would like to improve the function by making them smarter. For example, users and determine values of Style ans StyleID 	 in the POST fuction. However, it should be that when a StyleID is given, the Style name should be determined automatically, 		since there's a collection for StyleID and Style.
 
 * What would you do differently if you were allocated more time?
+
 	I'm trying to test my API in AWS Linux AMI instance, but I don't have time to complete this test. Also, I hadn't used Git to do 	the version control while I was developing the API. If I was allocated more time, I would learn to use Git to help me and learn 	how to operate AWS instance fluently to complete my test.
 
 
