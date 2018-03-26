@@ -6,12 +6,16 @@
 
 Setup Instruction:
 
-1.Install Node.js. Install MongoDB.
-2.Create a directory which you want to put in the api.
-3.Under that directory, command as "npm init". This will make you a file "package.json".Replace it with mine.
-4.Command as "npm install --save-dev nodemon", "npm install express --save", and "npm install mongoose --save".
-5.Copy my "api" directory under your directory.
-
+ 1. Install Node.js. Install MongoDB.
+ 2. Make "data\mydb" directory under "D:\mongoDB" -> "D:\MongoDB\data\mydb"
+ 3. Enter the where you install your MongoDB "D:\MongoDB\Server\3.6\bin"
+ 4. Import the beer recipes CSV file "mongoimport --db mydb --collection BeerRecipes --file recipeData.csv"
+ 5. Create a directory which you want to put in the api. -> "D:\restfulApi"
+ 6. Under that directory, command as "npm init". This will make you a file "package.json".Replace it with mine.
+ 7. Command as "npm install --save-dev nodemon", "npm install express --save", and "npm install mongoose --save".
+ 8. Copy my "api" directory under your directory. ->"D:\restfulApi\api"
+ 9. command under api directory "D:\restfulApi> npm run start" to run the server
+10. Use "Postman" to test HTTP requests "GET http://localhost:3000/beerRecipes"
 
 
 
